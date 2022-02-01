@@ -2,6 +2,7 @@ package com.architecture.calculatorspringboot.controller;
 
 import com.architecture.calculatorspringboot.service.CalculatorService;
 import com.architecture.calculatorspringboot.utils.Operation;
+import io.corp.calculator.TracerImpl;
 import java.math.BigDecimal;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
@@ -19,6 +20,7 @@ import org.springframework.web.bind.annotation.RestController;
 public class CalculatorController {
 
   private final CalculatorService calculatorService;
+  private final TracerImpl tracer;
 
   /**
    * Calculate response entity.
@@ -34,6 +36,7 @@ public class CalculatorController {
       @RequestParam(name = "operation") Operation operation) {
 
     double result = this.calculatorService.calculate(num1, num2, operation);
+    tracer.trace(result);
     return ResponseEntity.ok(result);
   }
 }
