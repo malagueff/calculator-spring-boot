@@ -1,6 +1,6 @@
-package com.architecture.calculatorspringboot.service;
+package com.acme.calculator.service;
 
-import com.architecture.calculatorspringboot.utils.Operation;
+import com.acme.calculator.utils.OperationEnum;
 import java.math.BigDecimal;
 
 /**
@@ -16,5 +16,5 @@ public interface CalculatorService {
    * @param operation the operation
    * @return the double
    */
-  Double calculate(BigDecimal num1, BigDecimal num2, Operation operation);
+  Double calculate(BigDecimal num1, BigDecimal num2, OperationEnum operation);
 }

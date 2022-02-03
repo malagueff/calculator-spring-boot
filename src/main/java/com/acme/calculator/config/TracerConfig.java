@@ -1,4 +1,4 @@
-package com.architecture.calculatorspringboot.config;
+package com.acme.calculator.config;
 
 import io.corp.calculator.TracerImpl;
 import org.springframework.context.annotation.Bean;
@@ -8,7 +8,7 @@ import org.springframework.context.annotation.Configuration;
  * The Init bean.
  */
 @Configuration
-public class InitBean {
+public class TracerConfig {
 
   /**
    * Tracer api tracer.

@@ -3,4 +3,4 @@ server:
 
 logging:
     level:
-        com.architecture.calculatorspringboot: DEBUG
+        com.acme.calculator: DEBUG

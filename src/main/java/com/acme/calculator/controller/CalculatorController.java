@@ -1,7 +1,7 @@
-package com.architecture.calculatorspringboot.controller;
+package com.acme.calculator.controller;
 
-import com.architecture.calculatorspringboot.service.CalculatorService;
-import com.architecture.calculatorspringboot.utils.Operation;
+import com.acme.calculator.service.CalculatorService;
+import com.acme.calculator.utils.OperationEnum;
 import io.corp.calculator.TracerImpl;
 import java.math.BigDecimal;
 import lombok.RequiredArgsConstructor;
@@ -33,7 +33,7 @@ public class CalculatorController {
   @GetMapping(value = "/calculate")
   public ResponseEntity<Double> calculate(@RequestParam(name = "num1") BigDecimal num1,
       @RequestParam(name = "num2") BigDecimal num2,
-      @RequestParam(name = "operation") Operation operation) {
+      @RequestParam(name = "operation") OperationEnum operation) {
 
     double result = this.calculatorService.calculate(num1, num2, operation);
     tracer.trace(result);

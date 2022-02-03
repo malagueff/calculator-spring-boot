@@ -12,8 +12,7 @@ Abrir una consola y ejecutar:
 ```
 git clone https://github.com/malagueff/calculator-spring-boot.git
 cd calculator-spring-boot
-mvn clean install
-java -jar target/calculator-spring-boot-0.0.1-SNAPSHOT.jar
+mvn spring-boot:run
 ```
 
 Ejemplo petición suma
